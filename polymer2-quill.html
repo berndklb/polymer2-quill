@@ -1,0 +1,35 @@
+<link rel="import" href="../polymer/polymer-element.html">
+<link rel="import" href="/polymer-quill.html">
+
+
+<dom-module id="polymer2-quill">
+
+  <template>
+    <style include="quill-core quill-snow"></style>
+    <!-- shadow DOM goes here -->
+    <div>
+      <h2>Hello</h2>
+      <div id="editor"></div>
+    </div>
+  </template>
+
+  <script>
+    class Polymer2Quill extends Polymer.Element {
+      static get is() {
+        return 'polymer2-quill';
+      }
+      constructor() {
+        super();
+      }
+      ready() {
+        super.ready();
+        this.editor = new Quill(this.$.editor, {
+          theme: 'snow'
+        });
+      } 
+    }
+    customElements.define(Polymer2Quill.is, Polymer2Quill);
+  </script>
+
+</dom-module>
+
