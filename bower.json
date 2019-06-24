@@ -10,7 +10,6 @@
     "test",
     "tests"
   ],
-  "main": "polymer-quill.html",
   "dependencies": {
     "polymer": "Polymer/polymer#^2.0.0",
     "iron-icon": "PolymerElements/iron-icon#^2.0.0",
